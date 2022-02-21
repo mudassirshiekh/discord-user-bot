@@ -7,6 +7,7 @@ Basic bot for recording meetings
  - "npm run dev" - run application in watch mode
 
 ## Modules
+ - discord.js
 Dev:
  - @types/node
  - ts-node
