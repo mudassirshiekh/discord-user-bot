@@ -4,6 +4,7 @@
   "description": "Basic bot for recording meetings",
   "main": "index.ts",
   "scripts": {
+    "start": "ts-node ./src/index.ts",
     "test": "test"
   },
   "keywords": [
