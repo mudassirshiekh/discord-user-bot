@@ -8,6 +8,7 @@ Basic bot for recording meetings
 
 ## Modules
  - discord.js
+ - dotenv
 Dev:
  - @types/node
  - ts-node
