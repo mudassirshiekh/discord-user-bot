@@ -2,7 +2,7 @@
   "name": "discord-record-bot",
   "version": "1.0.0",
   "description": "Basic bot for recording meetings",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "test"
   },
@@ -13,5 +13,8 @@
     "OrderOfDevs"
   ],
   "author": "Piotr 'Ugz' Bielski",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
 }
