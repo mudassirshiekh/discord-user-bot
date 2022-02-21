@@ -1,1 +1,1 @@
-console.log("Bot are starting...");
+console.log("Bot is starting...");
