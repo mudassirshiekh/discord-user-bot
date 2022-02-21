@@ -1,0 +1,17 @@
+{
+  "name": "discord-record-bot",
+  "version": "1.0.0",
+  "description": "Basic bot for recording meetings",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "record",
+    "OrderOfDevs"
+  ],
+  "author": "Piotr 'Ugz' Bielski",
+  "license": "ISC"
+}
