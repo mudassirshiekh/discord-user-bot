@@ -9,7 +9,7 @@ export const getDiscordManager = (listenerManager: ListenerManager): DiscordMana
     const intents: BitFieldResolvable<IntentsString, number> = listenerManager.getAllIntents();
 
     const client = new Client({intents});
-    listenerManager.runAll(client.on);
+    listenerManager.runAll(client);
 
     const onReadyClient = () => {
         console.log("Discord client is ready.");
