@@ -1,5 +1,6 @@
 import { ListenerManager } from './listenersManager';
 import { BitFieldResolvable, Client, Intents, IntentsString } from "discord.js";
+import { logText } from '../helpers/logger';
 
 export interface DiscordManager {
     login: () => void;
@@ -12,7 +13,7 @@ export const getDiscordManager = (listenerManager: ListenerManager): DiscordMana
     listenerManager.runAll(client);
 
     const onReadyClient = () => {
-        console.log("Discord client is ready.");
+        logText("Discord client is ready.");
     }
 
     client.on("ready", onReadyClient);
