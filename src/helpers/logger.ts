@@ -1,20 +1,13 @@
-export enum LoggerState {
-    fatal,
-    error,
-    warn,
-    info,
-    debug,
-    trace
-}
+import logger from "pino";
 
-export const logText = (msg: string, state: LoggerState = LoggerState.info) => {
-    const date = new Date();
-    if (process.env.SHOW_LOGS_IN_CONSOLE === "true")
-        console.log(`[${date.toLocaleString()}]:[${LoggerState[state]}] ${msg}`);
-};
-
-export const logObject = (obj: object, state: LoggerState = LoggerState.info) => {
-    const date = new Date();
-    if (process.env.SHOW_LOGS_IN_CONSOLE === "true")
-        console.log(`[${date.toLocaleString()}]:[${LoggerState[state]}] ${JSON.stringify(obj)}`);
-};
+export const createLog = logger({
+    Level: process.env.LOG_LEVEL || 'debug',
+    transport: {
+        target: "pino-pretty",
+        options: {
+            colorize: true,
+            ignore: "hostname,pid",
+            translationTime: "SYS:standard"
+        }
+    }
+});
