@@ -1,11 +1,13 @@
-export const logText = (msg: string) => {
-    const date = new Date();
-    if (process.env.SHOW_LOGS_IN_CONSOLE === "true")
-        console.log(`[${date.toLocaleString()}]: ${msg}`);
-};
+import logger from "pino";
 
-export const logObject = (obj: object) => {
-    const date = new Date();
-    if (process.env.SHOW_LOGS_IN_CONSOLE === "true")
-        console.log(`[${date.toLocaleString()}]: ${JSON.stringify(obj)}`);
-};
+export const createLog = logger({
+    Level: process.env.LOG_LEVEL || 'debug',
+    transport: {
+        target: "pino-pretty",
+        options: {
+            colorize: true,
+            ignore: "hostname,pid",
+            translationTime: "SYS:standard"
+        }
+    }
+});
