@@ -1,9 +1,8 @@
 export interface Trigger {
     name: string;
     executorName: string;
-    nextDateTimestamp: number;
-    nextDayGenerator: () => number;
-    run: () => void;
+    nextDate: number | string;
+    run: (executor: Executor) => void;
 }
 
 export interface Executor {
@@ -34,7 +33,12 @@ export const getTriggerManager = (): TriggerManager => {
     };
     const runAll = () => {
         triggerMap.forEach(trigger => {
-            trigger.run();
+            const executor = executorMap.get(trigger.executorName);
+            if (executor) {
+                trigger.run(executor);
+            } else {
+                throw `TriggerManager can't find executor "${trigger.executorName}" when try run triger "${trigger.name}"`;
+            }
         });
     };
     
