@@ -4,6 +4,7 @@ import { BitFieldResolvable, Client, IntentsString } from "discord.js";
 
 export interface DiscordManager {
     login: () => void;
+    getDiscordClient: () => Client;
 }
 
 export const getDiscordManager = (listenerManager: ListenerManager): DiscordManager => {
@@ -22,7 +23,12 @@ export const getDiscordManager = (listenerManager: ListenerManager): DiscordMana
         client.login(process.env.DISCORD_BOT_TOKEN);
     };
 
-    return {
-        login
+    const getDiscordClient = (): Client => {
+        return client;
     }
+
+    return {
+        login,
+        getDiscordClient,
+    };
 };
