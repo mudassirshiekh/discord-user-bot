@@ -1,1 +1,13 @@
-Your email client does not support HTML emails. Open newsletter here: {$url}. If you do not want to receive emails from us, click here: {$unsubscribe}
+Hej
+
+Termin płatności za program mentoringu grupowego minie {$next_payment_time} roku, w związku z czym chcieli byśmy przypomnieć iż brak wpłaty do tego czasu potraktowany będzie jako rezygnacja z subskrypcji.
+Możesz to zrobić poprzez stronę zrzutki: https://zrzutka.pl/3ejjf8
+Podczas dokonywania płatności prosimy o dodanie nicku, co ułatwi nam weryfikację wpłat.
+Jeśli już opłaciłeś to dziękujemy za zaufanie ;)
+
+P.S. Widzisz tą wiadomość w formie tekstowej gdyż Twój klient pocztowy nie wspiera wiadomości HTML. Otwórz wiadomość w przeglądarce: {$url}
+
+Pozdrawiamy,
+Zespół Order of Devs
+
+Otrzymałeś ten e-mail, ponieważ zapisałeś się do newslettera z przypomnieniami. Zrezygnuj z otrzymywania wiadomości klikając w link {$unsubscribe}
