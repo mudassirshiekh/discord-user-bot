@@ -26,8 +26,6 @@ export const getPayReminderMsgTrigger = (): Trigger => {
     
             const generalChannel = findTextChennelByName(process.env.NEWS_CHANNEL_NAME, discordClient);
             if (generalChannel) {
-                const nextPaymentTime = new Date();
-                nextPaymentTime.setDate(10);
                 const content = replaceParams(file, preparePayReminderParams());
                 generalChannel.send(content);
             } else {
