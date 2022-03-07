@@ -1,4 +1,4 @@
-Cześć @everyone @here, chciałem przypomnieć iż do {$next_payment_time} jest termin wpłat składki za {$payment_month}.Osoby które do tego czasu nie wpłacą pieniędzy utracą swój dostęp i posiadaną zniżkę.
+Cześć @everyone @here, chciałem przypomnieć iż do {$next_payment_time} jest termin wpłat składki za {$payment_month}. Osoby które do tego czasu nie wpłacą pieniędzy utracą swój dostęp i posiadaną zniżkę.
 
 Link do płatności: https://zrzutka.pl/3ejjf8
 
