@@ -3,7 +3,7 @@ import schedule from "node-schedule";
 import { MailingManager } from "../managers/mailingManager";
 
 export const getPayReminderMailTrigger = (): Trigger => {
-    const name = "PayReminderMsg";
+    const name = "PayReminderMail";
     const executorName = "MailingExecutor";
     const nextDate = "00 10 5 * *";
     let mailingManager: MailingManager;
