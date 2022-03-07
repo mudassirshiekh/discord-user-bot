@@ -6,6 +6,7 @@ declare global {
             NEWS_CHANNEL_NAME: string;
             CONTACT_USER_ID: string;
             MAILERLITE_API_KEY: string;
+            MAILERLITE_MG_REMINDER_GROUP_NAME: string;
         }
     }
 }
