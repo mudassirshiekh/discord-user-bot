@@ -5,7 +5,7 @@ import { MailingManager } from "../managers/mailingManager";
 export const getPayReminderMailTrigger = (): Trigger => {
     const name = "PayReminderMail";
     const executorName = "MailingExecutor";
-    const nextDate = "00 10 5 * *";
+    const nextDate = process.env.PAY_REMINDER_SCHEDULE || "00 10 5 * *";
     let mailingManager: MailingManager;
 
     const method = () => {
