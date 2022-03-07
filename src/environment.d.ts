@@ -7,6 +7,7 @@ declare global {
             CONTACT_USER_ID: string;
             MAILERLITE_API_KEY: string;
             MAILERLITE_MG_REMINDER_GROUP_NAME: string;
+            PAY_REMINDER_SCHEDULE: string;
         }
     }
 }
