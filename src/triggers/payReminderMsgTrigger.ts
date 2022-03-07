@@ -3,21 +3,7 @@ import { Trigger } from "../managers/triggerManager";
 import { Client } from 'discord.js';
 import { findTextChennelByName } from '../helpers/findChannel';
 import schedule from "node-schedule";
-
-enum MonthEnum {
-    Styczeń = 0,
-    Luty,
-    Marzec,
-    Kwiecień,
-    Maj,
-    Czerwiec,
-    Lipiec,
-    Sierpień,
-    Wrzesień,
-    Październik,
-    Listopad,
-    Grudzień
-}
+import { MonthEnum } from '../consts/monthEnum';
 
 export const getPayReminderMsgTrigger = (): Trigger => {
     const name = "PayReminderMsg";
