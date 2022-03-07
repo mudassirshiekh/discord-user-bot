@@ -12,7 +12,7 @@ import { createLog } from '../helpers/logger';
 export const getPayReminderMsgTrigger = (): Trigger => {
     const name = "PayReminderMsg";
     const executorName = "DiscordClient";
-    const nextDate = "0 10 5 * *";
+    const nextDate = process.env.PAY_REMINDER_SCHEDULE || "0 10 5 * *";
     let discordClient: Client;
 
     const method = () => {
