@@ -1,5 +1,3 @@
-import { loadFile } from './helpers/loadFile';
-import { getStatisticTextListener } from './listeners/statisticTextListener';
 import { getDiscordClientExecutors } from './executors/discordClientExecutor';
 import { createLog } from './helpers/logger';
 import { getWaveHelloListener } from './listeners/waveHelloListener';
