@@ -7,7 +7,7 @@ export const createLog = logger({
         options: {
             colorize: true,
             ignore: "hostname,pid",
-            translationTime: "SYS:standard"
+            translateTime: "SYS:yyyy-mm-dd HH:MM:ss.l"
         }
     }
 });
