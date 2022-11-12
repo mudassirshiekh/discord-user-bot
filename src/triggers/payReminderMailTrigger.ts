@@ -1,6 +1,7 @@
 import { Executor, Trigger } from "../managers/triggerManager";
 import schedule from "node-schedule";
 import { MailingManager } from "../managers/mailingManager";
+import {createLog} from "../helpers/logger";
 
 export const getPayReminderMailTrigger = (): Trigger => {
     const name = "PayReminderMail";
@@ -17,6 +18,7 @@ export const getPayReminderMailTrigger = (): Trigger => {
         }
         
         mailingManager.sendPayReminderMail(process.env.MAILERLITE_MG_REMINDER_GROUP_NAME);
+        createLog.info("Message with payment reminder was send via mail.");
     };
     
     const run = (executor: Executor) => {
