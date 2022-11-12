@@ -28,6 +28,8 @@ export const getPayReminderMsgTrigger = (): Trigger => {
             if (generalChannel) {
                 const content = replaceParams(file, preparePayReminderParams());
                 generalChannel.send(content);
+
+                createLog.info("Message with payment reminder was send via discord.");
             } else {
                 throw `"${process.env.NEWS_CHANNEL_NAME}" channel not found.`;
             }

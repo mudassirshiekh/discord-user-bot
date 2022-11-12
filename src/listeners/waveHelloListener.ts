@@ -1,6 +1,7 @@
 import { Client, IntentsString, Message, MessageEmbed } from 'discord.js';
 import { getRandomFromMap } from '../helpers/getRandomFromMap';
 import { Listener } from './../managers/listenersManager';
+import {createLog} from "../helpers/logger";
 
 export const helloGifsMap: Map<string, string> = new Map<string, string>([
     ["yoda", "https://c.tenor.com/-z2KfO5zAckAAAAC/hello-there-baby-yoda.gif"],
@@ -20,6 +21,8 @@ export const getWaveHelloListener = (): Listener => {
                 const image = new MessageEmbed();
                 image.setImage(gifUrl);
                 msg.reply({embeds: [image]});
+
+                createLog.info("Welcome wave was send.")
             }
         }
     };

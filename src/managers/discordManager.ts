@@ -20,6 +20,7 @@ export const getDiscordManager = (listenerManager: ListenerManager): DiscordMana
     client.on("ready", onReadyClient);
     
     const login = (): void => {
+        createLog.info("Bot is logging to discord...")
         client.login(process.env.DISCORD_BOT_TOKEN);
     };
 

@@ -6,7 +6,6 @@ import { getDiscordManager } from './managers/discordManager';
 import { getListenerManager } from './managers/listenersManager';
 import { getTriggerManager } from './managers/triggerManager';
 import { getPayReminderMsgTrigger } from './triggers/payReminderMsgTrigger';
-import { getMailingManager } from './managers/mailingManager';
 import { getMailingExecutor } from './executors/mailingExecutor';
 import { getPayReminderMailTrigger } from './triggers/payReminderMailTrigger';
 
@@ -20,11 +19,9 @@ listenerManager.registerListener(getWaveHelloListener());
 const discordManager = getDiscordManager(listenerManager);
 discordManager.login();
 
-const mailingManager = getMailingManager();
-
-const triggerManagger = getTriggerManager();
-triggerManagger.registerExecutor(getDiscordClientExecutors(discordManager.getDiscordClient()));
-triggerManagger.registerExecutor(getMailingExecutor());
-triggerManagger.registerTrigger(getPayReminderMsgTrigger());
-triggerManagger.registerTrigger(getPayReminderMailTrigger());
-triggerManagger.runAll();
+const triggerManager = getTriggerManager();
+triggerManager.registerExecutor(getDiscordClientExecutors(discordManager.getDiscordClient()));
+triggerManager.registerExecutor(getMailingExecutor());
+triggerManager.registerTrigger(getPayReminderMsgTrigger());
+triggerManager.registerTrigger(getPayReminderMailTrigger());
+triggerManager.runAll();

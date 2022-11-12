@@ -74,7 +74,6 @@ export const getMailingManager = (): MailingManager => {
     };
 
     const sendPayReminderMail = async (groupName: string) => {
-        console.log("inside send Pay Reminder");
         let campaignId: number | undefined;
         let isSetContent: boolean = false;
         try {
@@ -92,7 +91,6 @@ export const getMailingManager = (): MailingManager => {
                     analytics: 1,
                     type: 1
                 });
-                console.log(JSON.stringify(actResponse));
             }
             createLog.info(`Mail was send to group "${groupName}".`)
         } catch (err) {
