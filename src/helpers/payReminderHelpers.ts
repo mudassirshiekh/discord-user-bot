@@ -7,10 +7,10 @@ export const preparePayReminderParams = (): ContentParam[] => {
 
     return  [{
         name: "next_payment_time",
-        content: nextPaymentTime.toLocaleDateString()
+        content: nextPaymentTime.toLocaleDateString("pl-PL", { year: 'numeric', month: 'long', day: 'numeric' })
     },{
         name: "payment_month",
-        content: MonthEnum[nextPaymentTime.getMonth()]
+        content: MonthEnum[nextPaymentTime.getMonth()].toLowerCase()
     },{
         name: "contact_discord",
         content: process.env.CONTACT_USER_ID ? `<@!${[process.env.CONTACT_USER_ID]}>` : "Ugz'em"
