@@ -1,7 +1,7 @@
 import { Client, IntentsString, Message, MessageEmbed } from 'discord.js';
 import { getRandomFromMap } from '../helpers/getRandomFromMap';
 import { Listener } from './../managers/listenersManager';
-import {createLog} from "../helpers/logger";
+import {createLog} from "../utils/logger";
 
 export const helloGifsMap: Map<string, string> = new Map<string, string>([
     ["yoda", "https://c.tenor.com/-z2KfO5zAckAAAAC/hello-there-baby-yoda.gif"],

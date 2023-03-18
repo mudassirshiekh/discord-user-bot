@@ -1,7 +1,7 @@
 import { GuildMember, Client, IntentsString } from "discord.js";
 import { findTextChennelByName } from "../helpers/findChannel";
 import { EventsStrings, Listener } from "./../managers/listenersManager";
-import {createLog} from "../helpers/logger";
+import {createLog} from "../utils/logger";
 
 export const getWelcomeListener = (): Listener => {
     const name = "WelcomeListener";
@@ -17,8 +17,7 @@ export const getWelcomeListener = (): Listener => {
             `- Kim jesteś?\n` +
             `- Czym się interesujesz?\n` +
             `- Czym się zajmujesz?\n` +
-            `- Czego chcesz się nauczyć?\n` +
-            `- Jakie tematy chciał byś poruszyć na spotkaniach?\n`
+            `- Czego chcesz się nauczyć?\n`
         );
 
         createLog.info("Welcome message was send.");
