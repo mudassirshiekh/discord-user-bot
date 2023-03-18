@@ -4,10 +4,5 @@ export interface ContentParam {
 }
 
 export const replaceParams = (content: string, params: ContentParam[]): string => {
-    let result = content;
-    params.forEach(param => {
-        result = result.replace(`{$${param.name}}`, param.content);
-    });
-    
-    return result;
+    return params.reduce((result, param) => result.replace(`{$${param.name}}`, param.content), content);
 };
