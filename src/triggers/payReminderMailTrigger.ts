@@ -1,7 +1,7 @@
 import { Executor, Trigger } from "../managers/triggerManager";
 import schedule from "node-schedule";
 import { MailingManager } from "../managers/mailingManager";
-import {createLog} from "../helpers/logger";
+import {createLog} from "../utils/logger";
 
 export const getPayReminderMailTrigger = (): Trigger => {
     const name = "PayReminderMail";

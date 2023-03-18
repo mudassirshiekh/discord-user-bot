@@ -1,13 +1,13 @@
 import { getDiscordClientExecutors } from './executors/discordClientExecutor';
-import { createLog } from './helpers/logger';
+import { createLog } from './utils/logger';
 import { getWaveHelloListener } from './listeners/waveHelloListener';
 import { getWelcomeListener } from './listeners/welcomeListener';
 import { getDiscordManager } from './managers/discordManager';
 import { getListenerManager } from './managers/listenersManager';
 import { getTriggerManager } from './managers/triggerManager';
-import { getPayReminderMsgTrigger } from './triggers/payReminderMsgTrigger';
-import { getMailingExecutor } from './executors/mailingExecutor';
-import { getPayReminderMailTrigger } from './triggers/payReminderMailTrigger';
+// import { getPayReminderMsgTrigger } from './triggers/payReminderMsgTrigger';
+// import { getMailingExecutor } from './executors/mailingExecutor';
+// import { getPayReminderMailTrigger } from './triggers/payReminderMailTrigger';
 
 require('dotenv').config();
 
@@ -21,7 +21,7 @@ discordManager.login();
 
 const triggerManager = getTriggerManager();
 triggerManager.registerExecutor(getDiscordClientExecutors(discordManager.getDiscordClient()));
-triggerManager.registerExecutor(getMailingExecutor());
-triggerManager.registerTrigger(getPayReminderMsgTrigger());
-triggerManager.registerTrigger(getPayReminderMailTrigger());
+// triggerManager.registerExecutor(getMailingExecutor());
+// triggerManager.registerTrigger(getPayReminderMsgTrigger());
+// triggerManager.registerTrigger(getPayReminderMailTrigger());
 triggerManager.runAll();

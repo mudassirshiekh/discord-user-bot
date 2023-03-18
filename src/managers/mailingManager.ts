@@ -1,6 +1,6 @@
 import { replaceParams } from './../helpers/replaceParams';
 import { CampaignContent, CampaignData } from './../../node_modules/mailerlite-api-v2-node/dist/@types/index.d';
-import { createLog } from './../helpers/logger';
+import { createLog } from '../utils/logger';
 import MailerLite from "mailerlite-api-v2-node";
 import { MailerLiteGroup } from "mailerlite-api-v2-node/dist/api/groups";
 import { AssetPathMap } from '../consts/assetPathMap';

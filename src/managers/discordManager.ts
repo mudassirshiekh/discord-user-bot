@@ -1,4 +1,4 @@
-import { createLog } from './../helpers/logger';
+import { createLog } from '../utils/logger';
 import { ListenerManager } from './listenersManager';
 import { BitFieldResolvable, Client, IntentsString } from "discord.js";
 
