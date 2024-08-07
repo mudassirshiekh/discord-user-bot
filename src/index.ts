@@ -9,7 +9,7 @@ import { getTriggerManager } from './managers/triggerManager';
 // import { getMailingExecutor } from './executors/mailingExecutor';
 // import { getPayReminderMailTrigger } from './triggers/payReminderMailTrigger';
 
-require('dotenv').config();
+// require('dotenv').config();
 
 createLog.info("Bot is starting...");
 const listenerManager = getListenerManager();
