@@ -1,0 +1,6 @@
+.env
+.env-sample
+.gitignore
+logs
+README.md
+script.sh
