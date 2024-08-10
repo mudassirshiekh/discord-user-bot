@@ -12,8 +12,9 @@
   "keywords": [
     "bot",
     "discord",
-    "record",
-    "OrderOfDevs"
+    "OrderOfDevs",
+    "WelcomeMessage",
+    "UserList"
   ],
   "author": "Piotr 'Ugz' Bielski",
   "license": "ISC",
