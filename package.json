@@ -21,7 +21,6 @@
   "devDependencies": {
     "@types/node": "22.2.0",
     "@types/node-schedule": "2.1.7",
-    "dotenv": "16.4.5",
     "ts-loader": "9.5.1",
     "ts-node": "10.9.2",
     "ts-node-dev": "2.0.0",
@@ -30,11 +29,13 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "discord.js": "13.6.0",
+    "discord.js": "14.15.3",
+    "dotenv": "16.4.5",
     "mailerlite-api-v2-node": "1.2.0",
     "node-schedule": "2.1.1",
     "pino": "9.3.2",
     "pino-pretty": "11.2.2",
-    "pino-tee": "0.3.0"
+    "pino-tee": "0.3.0",
+    "zlib-sync": "^0.1.9"
   }
 }

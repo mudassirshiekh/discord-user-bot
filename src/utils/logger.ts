@@ -1,4 +1,5 @@
 import logger from "pino";
+import "pino-pretty";
 
 export const createLog = logger({
     level: process.env.LOG_LEVEL || 'debug',
