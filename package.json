@@ -1,7 +1,7 @@
 {
   "name": "discord-record-bot",
-  "version": "1.0.0",
-  "description": "Basic bot for recording meetings",
+  "version": "1.0.1",
+  "description": "A basic bot that sends a welcome message, with potential for more features in the future.",
   "main": "index.ts",
   "scripts": {
     "start": "ts-node ./src/index.ts | tee -a ./logs",
