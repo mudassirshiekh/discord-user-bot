@@ -86,6 +86,7 @@ npm start
  - `@types/node`
  - `ts-node-dev`
  - `typescript`
+ - `@biomejs/biome`
 
 ## Links:
  - [Issues](https://github.com/UgzSourceCode/discord-user-bot/issues)

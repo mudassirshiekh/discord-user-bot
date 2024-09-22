@@ -6,6 +6,10 @@
   "scripts": {
     "start": "ts-node ./src/index.ts | tee -a ./logs",
     "dev": "ts-node-dev --respawn ./src/index.ts  | tee -a ./logs",
+    "format": "npx @biomejs/biome format src --write",
+    "format:check": "npx @biomejs/biome format src",
+    "lint:check": "npx @biomejs/biome lint src",
+    "lint:fix": "npx @biomejs/biome lint src --apply",
     "test": "test"
   },
   "keywords": [
@@ -18,17 +22,18 @@
   "author": "Piotr 'Ugz' Bielski",
   "license": "ISC",
   "devDependencies": {
+    "@biomejs/biome": "1.9.2",
     "@types/node": "22.2.0",
     "ts-node-dev": "2.0.0",
     "typescript": "5.5.4"
   },
   "dependencies": {
-    "ts-node": "10.9.2",
     "discord.js": "14.15.3",
     "dotenv": "16.4.5",
     "modclean": "3.0.0-beta.1",
     "pino": "9.3.2",
     "pino-pretty": "11.2.2",
-    "pino-tee": "0.3.0"
+    "pino-tee": "0.3.0",
+    "ts-node": "10.9.2"
   }
 }
