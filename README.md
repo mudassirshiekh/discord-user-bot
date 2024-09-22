@@ -1,3 +1,4 @@
+#Mudassir Alam
 # discord-record-bot
 ## Description
 Basic bot for recording meetings
